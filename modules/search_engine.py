@@ -63,8 +63,13 @@ def search_in_file(filepath: str, word: str) -> List[dict]:
         # Split into lines for line number tracking
         lines = text.split('\n')
 
-        # Search for word with word boundaries (case-insensitive)
-        pattern = re.compile(r'\b' + re.escape(word) + r'\b', re.IGNORECASE)
+        # Search for word (case-insensitive)
+        # Use word boundaries only for ASCII words
+        if word.isascii() and word.replace('_', '').isalnum():
+            pattern = re.compile(r'\b' + re.escape(word) + r'\b', re.IGNORECASE)
+        else:
+            # For non-ASCII (Japanese, etc.), match without word boundaries
+            pattern = re.compile(re.escape(word), re.IGNORECASE)
 
         for line_num, line in enumerate(lines, 1):
             for match in pattern.finditer(line):
@@ -159,8 +164,13 @@ def execute_search(words: List[str]) -> dict:
 
                 text = soup_copy.get_text()
 
-                # Search for word (case-insensitive, whole word match)
-                pattern = re.compile(r'\b' + re.escape(word) + r'\b', re.IGNORECASE)
+                # Search for word (case-insensitive)
+                # Use word boundaries only for ASCII words
+                if word.isascii() and word.replace('_', '').isalnum():
+                    pattern = re.compile(r'\b' + re.escape(word) + r'\b', re.IGNORECASE)
+                else:
+                    # For non-ASCII (Japanese, etc.), match without word boundaries
+                    pattern = re.compile(re.escape(word), re.IGNORECASE)
                 matches = pattern.findall(text)
 
                 if matches:

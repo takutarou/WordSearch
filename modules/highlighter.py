@@ -20,9 +20,18 @@ def highlight_word(html_content: str, word: str, color: str = "#FFFF00") -> str:
     Returns:
         HTML content with highlighted words
     """
-    pattern = re.compile(r'\b' + re.escape(word) + r'\b', re.IGNORECASE)
-    replacement = f'<mark style="background-color: {color};">{word}</mark>'
-    return pattern.sub(replacement, html_content)
+    # Use word boundaries only for ASCII words
+    if word.isascii() and word.replace('_', '').isalnum():
+        pattern = re.compile(r'\b' + re.escape(word) + r'\b', re.IGNORECASE)
+    else:
+        # For non-ASCII (Japanese, etc.), match without word boundaries
+        pattern = re.compile(re.escape(word), re.IGNORECASE)
+
+    # Use a replacement function to preserve the matched case
+    def replace_match(match):
+        return f'<mark style="background-color: {color};">{match.group(0)}</mark>'
+
+    return pattern.sub(replace_match, html_content)
 
 
 def save_highlighted_html(content: str, output_path: str) -> bool:
