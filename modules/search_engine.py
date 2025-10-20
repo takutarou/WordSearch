@@ -188,8 +188,8 @@ def execute_search(words: List[str]) -> dict:
                     with open(output_path, 'w', encoding='utf-8') as f:
                         f.write(highlighted_html)
 
-                    # Calculate relative path from output directory
-                    relative_path = os.path.join(word, timestamp_str, output_filename)
+                    # Calculate relative path from output directory (use / for URL)
+                    relative_path = f"{word}/{timestamp_str}/{output_filename}"
 
                     # Store result
                     word_results.append({
