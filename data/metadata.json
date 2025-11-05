@@ -1,0 +1,136 @@
+{
+  "version": "1.0",
+  "last_updated": "2025-11-04",
+  "files": {
+    "毒薬・劇薬.html": {
+      "Law_RevisionID":"",
+      "official_name": "医薬品、医療機器等の品質、有効性及び安全性の確保等に関する法律施行規則",
+      "short_name": "薬機法施行規則",
+      "article": "第204条別表第３",
+      "established_date": "1961-02-01",
+      "type": "厚生省令",
+      "number": "第1号",
+      "latest_revision": {
+        "date": "2025-09-19",
+        "notice_name": "令和七年厚生労働省令第九十一号",
+        "description": ""
+      },
+      "source_url": "https://laws.e-gov.go.jp/law/336M50000100001",
+      "notes": ""
+    },
+    "麻薬・向精神薬1.html": {
+      "Law_RevisionID":"",
+      "official_name": "麻薬及び向精神薬取締法",
+      "short_name": "麻薬取締法",
+      "article": "【麻薬】第1章第2条別表第1/【向精神薬】第1章第2条別表第3",
+      "established_date": "1953-03-17",
+      "type": "法律",
+      "number": "第14号",
+      "latest_revision": {
+        "date": "",
+        "notice_name": "",
+        "description": ""
+      },
+      "source_url": "https://laws.e-gov.go.jp/law/328AC0000000014",
+      "notes": ""
+    },
+    "麻薬・向精神薬2.html": {
+      "Law_RevisionID":"402CO0000000238_20251003_507CO0000000312",
+      "official_name": "麻薬、麻薬原料植物、向精神薬、麻薬向精神薬原料等を指定する政令",
+      "short_name": "",
+      "article": "【麻薬】第1条/【向精神薬】第3条",
+      "established_date": "1992-08-01",
+      "type": "政令",
+      "number": "第238号",
+      "latest_revision": {
+        "date": "",
+        "notice_name": "",
+        "description": ""
+      },
+      "source_url": "https://laws.e-gov.go.jp/law/402CO0000000238",
+      "notes": ""
+    },
+    "覚せい剤・覚せい剤原料1.html": {
+      "Law_RevisionID":"326AC0100000252_20250601_504AC0000000068",
+      "official_name": "覚醒剤取締法",
+      "short_name": "",
+      "article": "【覚せい剤】第1章第2条/【覚せい剤原料】第1章第2条第5項別表",
+      "established_date": "1951-06-30",
+      "type": "法律",
+      "number": "第252号",
+      "latest_revision": {
+        "date": "",
+        "notice_name": "",
+        "description": ""
+      },
+      "source_url": "https://laws.e-gov.go.jp/law/326AC0100000252",
+      "notes": ""
+    },
+    "覚せい剤・覚せい剤原料2.html": {
+      "Law_RevisionID":"326AC0100000252_20250601_504AC0000000068",
+      "official_name": "覚醒剤原料を指定する政令",
+      "short_name": "",
+      "article": "",
+      "established_date": "1996-02-21",
+      "type": "政令",
+      "number": "第23号",
+      "latest_revision": {
+        "date": "2024-08-30",
+        "notice_name": "令和六年政令第二百五十八号",
+        "description": ""
+      },
+      "source_url": "https://laws.e-gov.go.jp/law/408CO0000000023",
+      "notes": ""
+    },
+    "処方箋医薬品.html": {
+      "Law_RevisionID":"",
+      "official_name": "医薬品、医療機器等の品質、有効性及び安全性の確保等に関する法律第四十九条第一項の規定に基づき厚生労働大臣の指定する医薬品",
+      "short_name": "",
+      "article": "",
+      "established_date": "平成17年2月10日",
+      "type": "厚生労働省告示",
+      "number": "第24号",
+      "latest_revision": {
+        "date": "",
+        "notice_name": "",
+        "description": ""
+      },
+      "source_url": "https://www.mhlw.go.jp/web/t_doc?dataId=81aa6750&dataType=0",
+      "notes": ""
+    },
+    "習慣性医薬品.html": {
+      "Law_RevisionID":"",
+      "official_name": "医薬品、医療機器等の品質、有効性及び安全性の確保等に関する法律第五十条第十一号の規定に基づき習慣性があるものとして厚生労働大臣の指定する医薬品",
+      "short_name": "",
+      "article": "",
+      "established_date": "昭和36年2月1日",
+      "type": "厚生労働省告示",
+      "number": "第18号",
+      "latest_revision": {
+        "date": "",
+        "notice_name": "",
+        "description": ""
+      },
+      "source_url": "https://www.mhlw.go.jp/web/t_doc?dataId=81072000&dataType=0&pageNo=1",
+      "notes": ""
+    },
+
+    
+    "生物由来原料基準.html": {
+      "Law_RevisionID":"",
+      "official_name": "生物由来原料基準",
+      "short_name": "",
+      "article": "",
+      "established_date": "平成15年5月20日",
+      "type": "厚生労働省告示",
+      "number": "第210号",
+      "latest_revision": {
+        "date": "平成30年2月28日",
+        "notice_name": "厚生労働省告示第37号",
+        "description": ""
+      },
+      "source_url": "https://www.mhlw.go.jp/web/t_doc?dataId=81aa4900&dataType=0&pageNo=1",
+      "notes": ""
+    }
+  }
+}
