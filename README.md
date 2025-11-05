@@ -251,6 +251,48 @@ Windows環境でも、URL生成時には常に`/`（スラッシュ）を使用�
 - XSS対策（Jinja2の自動エスケープ、JavaScriptでのHTMLエスケープ）
 - SHA256ハッシュによるファイル完全性チェック
 
+## データ収集の手順
+
+### e-Govに載っている場合
+法律や法律施行規則、政令などは検索できる
+
+1. e-Govで法令、規則の検索<br>
+https://laws.e-gov.go.jp
+![home](images/home.png)
+
+2. 検索対象が「医薬品、医療機器等の品質、有効性及び安全性の確保等に関する法律施行規則」の場合は検索欄に「医薬品、医療機器等の品質、有効性及び安全性の確保等に関する法律」を入力
+![search](images/search.png)
+
+3. 検索でヒットした場合、該当する法令や規則をクリック
+![search_result](images/search_result.png)
+
+4. 「医薬品、医療機器等の品質、有効性及び安全性の確保等に関する法律施行規則」の第204条別表3をデータにしたい時
+![search_result1](images/search_result1.png)
+
+5. 別表3をクリックする
+![data](images/data.png)
+
+6. 右下のダウンロードをクリック
+![dawnload](images/dawnload.png)
+
+7. ファイル名がLae RevisionIDを利用しており、施行日が入っているのでアプリ内でこの日付を使う。
+![dawnload](images/Law_id.png)
+![dawnload](images/Law_id1.png)
+
+### e-Govに載っていない場合
+厚生労働省告示第◯号
+
+1. 「医薬品、医療機器等の品質、有効性及び安全性の確保等に関する法律第五十条第十一号の規定に基づき習慣性があるものとして厚生労働大臣の指定する医薬品」をデータにしたい時、Googleなどのブラウザで検索して厚生労働省の管理下ページにアクセスする。
+https://www.mhlw.go.jp/web/t_doc?dataId=81072000&dataType=0&pageNo=1
+
+![web_page](images/web_page.png)
+
+2. VS codeのTerminalでdownload_html.pyを利用して、上記の厚生労働省管理下のページを指定して、html化する
+
+[html化の詳細はこちら](#方法2:WebページをダウンロードしてHTMLとして保存)
+
+
+
 ## 🔧 トラブルシューティング
 
 ### 検索結果が表示されない
