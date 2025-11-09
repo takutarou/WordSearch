@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="info-section">
+        <p>検索対象ファイル: <strong id="file-count">{{ total_files }}件</strong></p>
+    </div>
+
+    <div id="error-message" class="error-message" style="display: none;"></div>
+
+    <div class="search-section">
+        <h2>検索単語を入力してください</h2>
+
+        <form id="search-form" onsubmit="event.preventDefault(); executeSearch();">
+            <div id="search-inputs">
+                <div class="search-input-row" id="input-1">
+                    <label for="word-1">検索単語 1:</label>
+                    <input type="text" id="word-1" name="word-1" maxlength="200" placeholder="検索したい単語を入力" class="form-input">
+                </div>
+            </div>
+
+            <div class="button-group">
+                <button type="button" onclick="addSearchInput()" class="btn-secondary btn-add">+ 検索欄を追加</button>
+            </div>
+
+            <div class="button-group">
+                <button type="submit" id="search-button" class="btn-primary">検索実行</button>
+            </div>
+        </form>
+    </div>
+
+    <div id="loading" class="spinner" style="display: none;">
+        <div class="spinner-icon"></div>
+        <p>検索中...</p>
+    </div>
+
+    <div id="results" class="results-section" style="display: none;">
+        <h2>検索結果</h2>
+        <div class="result-metadata">
+            <p>検索ID: <span id="search-id">--</span></p>
+            <p>実行日時: <span id="search-timestamp">--</span></p>
+        </div>
+        <div id="results-list"></div>
+    </div>
+</div>
+{% endblock %}
